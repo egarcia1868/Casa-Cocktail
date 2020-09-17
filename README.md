@@ -1,4 +1,4 @@
-# PROJECT 1: CASA COCKTAIL
+# Casa Cocktail
 
 ## INTRODUCTION
 Last minute guests coming over or simply forgot to make a run to the liquor store?
@@ -25,22 +25,22 @@ Casa Cocktail will have users whipping out drinks like a seasoned bartender. Sim
 
 1. **Opening Page**
 
-![image](assests/opening_page.jpg)
+![image](assets/opening_page.jpg)
 
 <br>
 
 2. **Beverage Choice Page**
 
-![image](assests/pick_options.jpg)
+![image](assets/pick_options.jpg)
 <br>
 
 3. **Drink Menu**
 
-![image](assests/pick_drink.jpg)
+![image](assets/pick_drink.jpg)
 
 4. **Recipe Page**
 
-![image](assests/drink_recipe.jpg)
+![image](assets/drink_recipe.jpg)
 <br>
 
 ## CONTRIBUTORS
@@ -96,5 +96,7 @@ Click the badge below to go directly to website
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 
+## Acknowledgments
 
-
+* Big ups to my mentor, Calvin Carter, for help throughout the production of this and many of my other projects.
+* Tons of help for this was found at w3schools (https://www.w3schools.com/), mozilla (https://developer.mozilla.org/), and various googleables
