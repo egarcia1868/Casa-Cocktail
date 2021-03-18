@@ -6,7 +6,7 @@ $(document).ready(function () {
     "Amaretto", "Aperol", "Apple Schnapps", "Baileys irish cream", "Banana liqueur", "Beer", "Blue curacao", "Bourbon", "Brandy", "Butterscotch schnapps", "Champagne", "Cider", "Coconut rum", "Cognac", "Dry vermouth", "Galliano", "Gin", "Gold tequila", "Goldschlager", "Guinness", "Kahlua", "Melon liqueur", "Pisco", "Raspberry liqueur", "Red wine", "Rum", "Rye whiskey", "Scotch", "Sherry", "Southern comfort", "Sweet vermouth", "Tequila", "Triple sec", "Vermouth", "Vodka"
   ];
   var mixerChoicesArr = [
-    "Apple juice", "Bitters", "Black pepper", "Brown sugar", "Butter", "Carbonated soft drink", "Carbonated water", "Celery", "Celery salt", "Cherries", "Cinnamon", "Clamato juice", "Club soda", "Cocktail onion", "Cranberry juice", "Cream", "Egg", "Egg white", "Egg yolk", "Eggnog", "Fresh lemon juice", "Ginger", "Ginger ale", "Ginger beer", "Granulated sugar", "Grape juice", "Grapefruit juice", "Green olives", "Grenadine", "Half-and-half", "Honey", "Hot sauce", "Iced tea", "Lemon", "Lemon juice", "Lemonade", "Lime", "Lime juice", "Maple syrup", "Maraschino cherry", "Margarita mix", "Milk", "Mint", "Olive", "Orange juice", "Pepper", "Peychaud bitters", "Pina colada mix", "Pineapple juice", "Roses sweetened lime juice", "Salt", "Soda water", "Sweet and sour", "Tabasco sauce", "Vanilla extract"
+    "Apple juice", "Bitters", "Black pepper", "Brown sugar", "Butter", "Carbonated soft drink", "Carbonated water", "Celery", "Celery salt", "Cherries", "Cinnamon", "Clamato juice", "Club soda", "Cocktail onion", "Cranberry juice", "Cream", "Egg", "Egg white", "Egg yolk", "Eggnog", "Fresh lemon juice", "Ginger", "Ginger ale", "Ginger beer", "Granulated sugar", "Grape juice", "Grapefruit juice", "Green olives", "Grenadine", "Honey", "Hot sauce", "Iced tea", "Lemon", "Lemon juice", "Lemonade", "Lime", "Lime juice", "Maple syrup", "Maraschino cherry", "Margarita mix", "Mint", "Olive", "Orange juice", "Pepper", "Peychaud bitters", "Pina colada mix", "Pineapple juice", "Roses sweetened lime juice", "Salt", "Soda water", "Sweet and sour", "Tabasco sauce", "Vanilla extract"
   ];
   var checkedArr = [];
   var jokeURL = "https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist&type=twopart";
@@ -105,6 +105,14 @@ $(document).ready(function () {
       for (var i = 0; i < items.length; i++) {
         if (items[i].type == 'checkbox' && items[i].checked == true) {
           var ingToFormat = items[i].value;
+          // this will include recipes that call for generic versions of ingredients.
+          if (ingToFormat === "Kahlua") {
+            checkedArr.push("Coffee liqueur");
+          } else if (ingToFormat === "Cream") {
+            checkedArr.push("Half-and-half");
+            checkedArr.push("Milk");
+            checkedArr.push("Light cream");
+          }
           // var ingToFormat2 = ingToFormat.charAt(0).toUpperCase() + ingToFormat.substring(1).toLowerCase();
           // console.log("type itf: " +ingToFormat);
           checkedArr.push(ingToFormat); //  !!!!!  may need to change text to something else
